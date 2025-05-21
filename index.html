@@ -3,101 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sair Sapata Inc. | Discover Your Next Adventure</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fefefe;
-      color: #333;
-    }
-    header {
-      background: #ff6600;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-    nav {
-      background: #333;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      background: url('https://source.unsplash.com/1600x600/?travel,beach') no-repeat center center/cover;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2.5rem;
-      text-shadow: 2px 2px 5px #000;
-    }
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h2 {
-      color: #ff6600;
-    }
-    .packages {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .package {
-      flex: 1 1 calc(33% - 20px);
-      border: 1px solid #ddd;
-      padding: 10px;
-      border-radius: 8px;
-      background: white;
-    }
-    .package img {
-      width: 100%;
-      border-radius: 6px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    form input, form textarea {
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    form button {
-      padding: 10px;
-      background: #ff6600;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .footer {
-      background: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    @media(max-width: 768px) {
-      .package {
-        flex: 1 1 100%;
-      }
-    }
-  </style>
+  <title>Sair Sapata Inc. | Your Dream Holidays</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/scripts.js"></script>
 </head>
 <body>
   <header>
@@ -105,77 +13,29 @@
     <p>Discover Your Next Adventure</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#packages">Packages</a>
-    <a href="#custom">Custom Trips</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero">
-    Your Dream Vacation Starts Here
-  </div>
-
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>Founded by travel enthusiast Maitreyi Jha, Sair Sapata Inc. is your boutique travel partner specializing in curated, memorable holidays. With 80L+ GMV in just 2 months, we ensure personalized planning, seamless service, and the joy of travel, your way.</p>
-  </section>
-
   <section id="packages" class="section">
-    <h2>Popular Packages</h2>
-    <div class="packages">
-      <div class="package">
-        <img src="https://source.unsplash.com/400x250/?greece,island" alt="Greece" />
-        <h3>Greece - Island Hopping</h3>
-        <p>10 Days | Athens, Milos, Paros, Santorini</p>
-      </div>
-      <div class="package">
-        <img src="https://source.unsplash.com/400x250/?vietnam" alt="Vietnam" />
-        <h3>Vietnam & Cambodia</h3>
-        <p>9 Days | Hanoi, Halong Bay, Siem Reap</p>
-      </div>
-      <div class="package">
-        <img src="https://source.unsplash.com/400x250/?coorg" alt="Coorg" />
-        <h3>Coorg Wilderness</h3>
-        <p>3 Nights | Scenic nature escapes for families</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="custom" class="section">
-    <h2>Plan a Custom Trip</h2>
-    <form action="https://formspree.io/f/mwkgyqzg" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Where would you like to go?" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <h2>Popular Destinations</h2>
+    <div id="package-list" class="package-list"></div>
   </section>
 
   <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <p>Email: sairsapatainc@gmail.com</p>
-    <p>Phone: +91 84470 50951 / +91 92112 08304</p>
-    <p>Instagram: <a href="https://www.instagram.com/sairsapatainc" target="_blank">@sairsapatainc</a></p>
+    <form action="https://formspree.io/f/mwkgyqzg" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Travel Requirements"></textarea>
+      <button type="submit">Send</button>
+    </form>
   </section>
 
-  <a href="https://wa.me/918447050951" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 12px 16px;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  ">
-    Chat with us
+  <a href="https://wa.me/918447050951?text=Hi%20Sair%20Sapata!%20I%20need%20travel%20assistance." 
+     style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 10px 15px; 
+            border-radius: 50px; font-weight: bold; text-decoration: none;">
+    Chat on WhatsApp
   </a>
 
-  <footer class="footer">
-    <p>&copy; 2025 Sair Sapata Inc. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 Sair Sapata Inc.</p>
   </footer>
 </body>
 </html>

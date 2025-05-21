@@ -1,0 +1,33 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+}
+header {
+  background: #ff6600;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.package-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.package {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+.package img {
+  width: 100%;
+  border-radius: 8px;
+}
